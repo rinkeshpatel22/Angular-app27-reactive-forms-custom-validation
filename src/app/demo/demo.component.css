@@ -1,0 +1,23 @@
+h3{
+    padding: 10px;
+    background-color: #bbb;
+}
+
+.form{
+    padding: 20px;
+}
+div{
+    padding: 15px;
+}
+button{
+    height: 30px;
+    width: 100px;
+}
+input{
+    height: 30px;
+    width: 200px;
+}
+span{
+    padding-left: 10px;
+    color: red;
+}

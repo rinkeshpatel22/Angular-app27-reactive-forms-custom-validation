@@ -1,0 +1,20 @@
+<h3>Reactive Forms Example</h3>
+
+<div class="form">
+  <form [formGroup]="demoFormGroup" (ngSubmit)="onFormSubmit()" method="post">
+    <div>
+      <input type="text" placeholder="First name" formControlName="fname">
+      <span *ngIf="demoFormGroup.get('fname').touched && demoFormGroup.get('fname').errors?.required">This field is required</span>
+    </div>
+    <div>
+      <input type="text" placeholder="Last name" formControlName="lname">
+      <span *ngIf="demoFormGroup.get('lname').touched && demoFormGroup.get('lname').errors?.required">This field is required</span>
+    </div>
+    <div>
+      <input type="text" placeholder="Email ID" formControlName="email">
+      <span *ngIf="demoFormGroup.get('email').touched && demoFormGroup.get('email').errors?.required">This field is required</span>
+      <span *ngIf="demoFormGroup.get('email').touched && demoFormGroup.get('email').errors?.pattern">Please enter valid email id</span>
+    </div>
+    <div><button type="submit">Submit</button></div>
+  </form>
+</div>
